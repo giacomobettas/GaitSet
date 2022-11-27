@@ -3,7 +3,8 @@
 # @Time    : 2018/12/19
 
 import os
-from scipy import misc as scisc
+#from scipy import misc as scisc
+import imageio # riga 136
 import cv2
 import numpy as np
 from warnings import warn
@@ -26,11 +27,11 @@ def boolean_string(s):
 
 
 parser = argparse.ArgumentParser(description='Test')
-parser.add_argument('--input_path', default='', type=str,
+parser.add_argument('--input_path', default='/home/giacomo/Work/DSD/gaitdata/CASIA-B_subset', type=str,
                     help='Root path of raw dataset.')
-parser.add_argument('--output_path', default='', type=str,
+parser.add_argument('--output_path', default='/home/giacomo/Work/DSD/gaitdata/CASIA-B_subset_out', type=str,
                     help='Root path for output.')
-parser.add_argument('--log_file', default='./pretreatment.log', type=str,
+parser.add_argument('--log_file', default='/home/giacomo/Work/DSD/gaitdata/CASIA-B_subset_out/pretreatment.log', type=str,
                     help='Log file path. Default: ./pretreatment.log')
 parser.add_argument('--log', default=False, type=boolean_string,
                     help='If set as True, all logs will be saved. '
@@ -132,7 +133,7 @@ def cut_pickle(seq_info, pid):
         if img is not None:
             # Save the cut img
             save_path = os.path.join(out_dir, _frame_name)
-            scisc.imsave(save_path, img)
+            imageio.imwrite(save_path, img) # sostituisce scisc.imsave
             count_frame += 1
     # Warn if the sequence contains less than 5 frames
     if count_frame < 5:

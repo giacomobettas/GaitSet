@@ -2,9 +2,9 @@ conf = {
     "WORK_PATH": "./work",
     "CUDA_VISIBLE_DEVICES": "0,1,2,3",
     "data": {
-        'dataset_path': "your_dataset_path",
+        'dataset_path': "/home/giacomo/Work/DSD/gaitdata",
         'resolution': '64',
-        'dataset': 'CASIA-B',
+        'dataset': 'CASIA-B_subset',
         # In CASIA-B, data of subject #5 is incomplete.
         # Thus, we ignore it in training.
         # For more detail, please refer to
