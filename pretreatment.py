@@ -31,7 +31,7 @@ parser.add_argument('--input_path', default='/home/giacomo/Work/DSD/gaitdata/CAS
                     help='Root path of raw dataset.')
 parser.add_argument('--output_path', default='/home/giacomo/Work/DSD/gaitdata/CASIA-B_subset_out', type=str,
                     help='Root path for output.')
-parser.add_argument('--log_file', default='/home/giacomo/Work/DSD/gaitdata/CASIA-B_subset_out/pretreatment.log', type=str,
+parser.add_argument('--log_file', default='/home/giacomo/Work/DSD/gaitdata/pretreatment.log', type=str,
                     help='Log file path. Default: ./pretreatment.log')
 parser.add_argument('--log', default=False, type=boolean_string,
                     help='If set as True, all logs will be saved. '
