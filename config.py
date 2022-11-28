@@ -2,7 +2,7 @@ conf = {
     "WORK_PATH": "./work",
     "CUDA_VISIBLE_DEVICES": "0,1,2,3",
     "data": {
-        'dataset_path': "/home/giacomo/Work/DSD/gaitdata",
+        'dataset_path': "/home/giacomo/Work/DSD/gaitdata/CASIA-B_subset",
         'resolution': '64',
         'dataset': 'CASIA-B_subset',
         # In CASIA-B, data of subject #5 is incomplete.
