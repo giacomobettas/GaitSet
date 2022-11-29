@@ -58,8 +58,8 @@ class Model:
         self.encoder = nn.DataParallel(self.encoder)
         self.triplet_loss = TripletLoss(self.P * self.M, self.hard_or_full_trip, self.margin).float()
         self.triplet_loss = nn.DataParallel(self.triplet_loss)
-        self.encoder.cuda()
-        self.triplet_loss.cuda()
+        #self.encoder.cuda()
+        #self.triplet_loss.cuda()
 
         self.optimizer = optim.Adam([
             {'params': self.encoder.parameters()},
@@ -213,7 +213,7 @@ class Model:
                 break
 
     def ts2var(self, x):
-        return autograd.Variable(x).cuda()
+        return autograd.Variable(x)#.cuda()
 
     def np2var(self, x):
         return self.ts2var(torch.from_numpy(x))
