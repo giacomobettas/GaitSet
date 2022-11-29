@@ -1,5 +1,5 @@
 conf = {
-    "WORK_PATH": "./work",
+    "WORK_PATH": "/home/giacomo/Work/DSD/Old Man Down/GaitSet/work",
     "CUDA_VISIBLE_DEVICES": "0,1,2,3",
     "data": {
         'dataset_path': "/home/giacomo/Work/DSD/gaitdata/CASIA-B_subset_out",
